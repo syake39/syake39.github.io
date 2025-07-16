@@ -1,0 +1,63 @@
+/* 基本スタイル */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* ヘッダーのスタイル */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    margin-left: 30px;
+}
+
+/* メインコンテンツのスタイル */
+main {
+    padding: 40px 20px;
+}
+section {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 40px;
+}
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* フッターのスタイル */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
