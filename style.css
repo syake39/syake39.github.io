@@ -3,7 +3,6 @@ body {
     margin: 0;
     font-family: sans-serif;
     color: #333;
-    transition: all 0.3s ease; /* 変化を滑らかにするためのおまけです */
 }
 a {
     text-decoration: none;
@@ -55,6 +54,13 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* --- 画像のレスポンシブ対応 --- */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px; /* 画像の上の余白 */
+}
+
 /* フッターのスタイル */
 footer {
     background-color: #333;
@@ -63,20 +69,15 @@ footer {
     padding: 20px;
 }
 
-/* --- ここからレスポンシブ対応 --- */
-/* 画面幅が768px以下の場合に適用されるスタイル */
+/* --- レスポンシブ対応 --- */
 @media (max-width: 768px) {
-    /* ヘッダーの要素を縦並びにする */
     header {
         flex-direction: column;
         padding: 20px;
     }
-
     .logo h1 {
         margin-bottom: 15px;
     }
-
-    /* ナビゲーションメニューも縦並びにする */
     nav ul {
         flex-direction: column;
     }
@@ -85,4 +86,15 @@ footer {
         margin-bottom: 10px;
         text-align: center;
     }
+}
+
+/* --- フェードインのためのCSS --- */
+.fade-in-target {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
