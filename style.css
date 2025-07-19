@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: sans-serif;
     color: #333;
+    transition: all 0.3s ease; /* 変化を滑らかにするためのおまけです */
 }
 a {
     text-decoration: none;
@@ -60,4 +61,28 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+/* --- ここからレスポンシブ対応 --- */
+/* 画面幅が768px以下の場合に適用されるスタイル */
+@media (max-width: 768px) {
+    /* ヘッダーの要素を縦並びにする */
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .logo h1 {
+        margin-bottom: 15px;
+    }
+
+    /* ナビゲーションメニューも縦並びにする */
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
 }
