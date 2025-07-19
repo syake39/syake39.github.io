@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>レスポンシブ対応ウェブサイト</title>
+    <title>フェードイン機能付きウェブサイト</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,22 +22,30 @@
     </header>
 
     <main>
-        <section>
+        <!-- "fade-in-target"クラスを追加 -->
+        <section class="fade-in-target">
             <h2>お知らせ</h2>
             <ul>
                 <li>2025/07/15  ウェブサイトを公開しました。</li>
                 <li>2025/07/01  事務所を移転しました。</li>
             </ul>
         </section>
-        <section>
+
+        <!-- "fade-in-target"クラスを追加 -->
+        <section class="fade-in-target">
             <h2>事業内容</h2>
             <p>私たちは、お客様のビジネスを加速させるためのウェブソリューションを提供します。</p>
+            <!-- 画像を追加 -->
+            <img src="solroc.jpg" alt="事業内容のイメージ画像">
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 My Website. All Rights Reserved.</p>
     </footer>
+
+    <!-- JavaScriptファイルを読み込みます -->
+    <script src="script.js"></script>
 
 </body>
 </html>
