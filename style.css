@@ -194,7 +194,7 @@ html {
     margin: 0 0 10px 0;
 }
 .eat__item p {
-    color: var(--accent-color-1);
+    color: var(--text-color); /* 黄色に変更 */
 }
 
 /* --- WORKSHOPセクション --- */
@@ -283,7 +283,7 @@ html {
 }
 .about__list dd {
     margin-left: 0;
-    color: var(--accent-color-1); /* 薄い黄色 */
+    color: var(--text-color); /* 黄色に変更 */
 }
 
 
