@@ -151,7 +151,21 @@ html {
     bottom: 30px;
 }
 
-/* (他のセクションのスタイルは省略。前回のCSSと同じです) */
+/* --- コンテンツセクション共通 --- */
+.content-section {
+    padding: 120px 20px;
+}
+.section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin-bottom: 20px;
+    color: var(--accent-color-2);
+}
+.section-subtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
 
 /* --- EATセクション --- */
 .eat__grid {
@@ -166,6 +180,7 @@ html {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    text-align: center; /* 中央揃えを追加 */
 }
 .eat__item img {
     width: 100%;
@@ -190,6 +205,9 @@ html {
     align-items: center;
     gap: 30px 20px;
 }
+.artist__item {
+    text-align: center; /* 中央揃えを追加 */
+}
 .artist__item img {
     width: 150px;
     height: 150px;
@@ -208,6 +226,7 @@ html {
     font-family: var(--font-heading);
     line-height: 2;
     color: var(--text-color);
+    text-align: center; /* 中央揃えを追加 */
 }
 
 /* --- TICKETセクション --- */
@@ -215,11 +234,14 @@ html {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 .ticket-card {
     background: var(--secondary-color);
     border-radius: 15px;
     overflow: hidden;
+    text-align: center; /* 中央揃えに変更 */
 }
 .ticket-card__header {
     background: var(--text-color);
@@ -238,11 +260,10 @@ html {
     color: var(--accent-color-2);
 }
 .ticket-card__button {
-    display: block;
+    display: inline-block; /* 中央揃えのため変更 */
     background: var(--text-color);
     color: var(--main-bg-color);
-    text-align: center;
-    padding: 15px;
+    padding: 15px 40px; /* パディング調整 */
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
@@ -250,21 +271,27 @@ html {
 
 /* --- ABOUTセクション --- */
 .about__list {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 15px 20px;
+    max-width: 600px;
+    margin: 0 auto;
     background: var(--secondary-color);
     padding: 40px;
     border-radius: 15px;
+    text-align: center; /* 中央揃えに変更 */
 }
 .about__list dt {
     font-weight: bold;
     color: var(--accent-color-1);
+    margin-top: 15px;
 }
+.about__list dd {
+    margin-left: 0; /* dt,ddを縦に並べるためリセット */
+}
+
 
 /* --- フッター --- */
 .footer {
     padding: 80px 20px;
+    text-align: center;
 }
 .footer__title {
     font-family: var(--font-heading);
@@ -296,5 +323,8 @@ html {
     }
     .header__inner {
         padding: 0 20px;
+    }
+    .content-section {
+        text-align: center;
     }
 }
