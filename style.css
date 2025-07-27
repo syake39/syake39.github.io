@@ -154,6 +154,7 @@ html {
 /* --- コンテンツセクション共通 --- */
 .content-section {
     padding: 120px 20px;
+    text-align: center; /* すべてのセクションを中央揃えに */
 }
 .section-title {
     font-family: var(--font-heading);
@@ -180,7 +181,6 @@ html {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    text-align: center; /* 中央揃えを追加 */
 }
 .eat__item img {
     width: 100%;
@@ -190,7 +190,7 @@ html {
     margin-bottom: 15px;
 }
 .eat__item h3 {
-    color: var(--text-color);
+    color: var(--text-color); /* 黄色に変更 */
     margin: 0 0 10px 0;
 }
 .eat__item p {
@@ -205,9 +205,6 @@ html {
     align-items: center;
     gap: 30px 20px;
 }
-.artist__item {
-    text-align: center; /* 中央揃えを追加 */
-}
 .artist__item img {
     width: 150px;
     height: 150px;
@@ -216,6 +213,7 @@ html {
 }
 .artist__item h4 {
     margin-top: 10px;
+    color: var(--text-color); /* 黄色に変更 */
 }
         
 /* --- DRINKセクション --- */
@@ -225,8 +223,7 @@ html {
     font-size: 1.8rem;
     font-family: var(--font-heading);
     line-height: 2;
-    color: var(--text-color);
-    text-align: center; /* 中央揃えを追加 */
+    color: var(--text-color); /* 黄色に変更 */
 }
 
 /* --- TICKETセクション --- */
@@ -241,7 +238,6 @@ html {
     background: var(--secondary-color);
     border-radius: 15px;
     overflow: hidden;
-    text-align: center; /* 中央揃えに変更 */
 }
 .ticket-card__header {
     background: var(--text-color);
@@ -259,11 +255,14 @@ html {
     font-weight: bold;
     color: var(--accent-color-2);
 }
+.ticket-card__desc {
+    color: var(--text-color); /* 黄色に変更 */
+}
 .ticket-card__button {
-    display: inline-block; /* 中央揃えのため変更 */
+    display: inline-block;
     background: var(--text-color);
     color: var(--main-bg-color);
-    padding: 15px 40px; /* パディング調整 */
+    padding: 15px 40px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
@@ -276,22 +275,21 @@ html {
     background: var(--secondary-color);
     padding: 40px;
     border-radius: 15px;
-    text-align: center; /* 中央揃えに変更 */
 }
 .about__list dt {
     font-weight: bold;
-    color: var(--accent-color-1);
+    color: var(--text-color); /* 黄色に変更 */
     margin-top: 15px;
 }
 .about__list dd {
-    margin-left: 0; /* dt,ddを縦に並べるためリセット */
+    margin-left: 0;
+    color: var(--accent-color-1); /* 薄い黄色 */
 }
 
 
 /* --- フッター --- */
 .footer {
     padding: 80px 20px;
-    text-align: center;
 }
 .footer__title {
     font-family: var(--font-heading);
@@ -323,8 +321,5 @@ html {
     }
     .header__inner {
         padding: 0 20px;
-    }
-    .content-section {
-        text-align: center;
     }
 }
