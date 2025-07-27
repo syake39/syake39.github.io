@@ -290,6 +290,7 @@ html {
 /* --- フッター --- */
 .footer {
     padding: 80px 20px;
+    text-align: center; /* 中央揃えを追加 */
 }
 .footer__title {
     font-family: var(--font-heading);
