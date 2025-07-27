@@ -14,38 +14,68 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- ヘッダー：画面上部に固定されます -->
+    <header class="header">
+        <div class="header__inner">
+            <a href="#" class="header__logo">Cocochill</a>
+            <!-- PC用のナビゲーション -->
+            <nav class="header__nav pc-nav">
+                <ul>
+                    <li><a href="#eat">EAT</a></li>
+                    <li><a href="#workshop">WORKSHOP</a></li>
+                    <li><a href="#drink">DRINK</a></li>
+                    <li><a href="#ticket">TICKET</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                </ul>
+            </nav>
+            <!-- ハンバーガーメニューボタン -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <!-- スマホ用のナビゲーション（最初は非表示） -->
+    <nav class="sp-nav" id="sp-nav">
+        <ul>
+            <li><a href="#eat">EAT</a></li>
+            <li><a href="#workshop">WORKSHOP</a></li>
+            <li><a href="#drink">DRINK</a></li>
+            <li><a href="#ticket">TICKET</a></li>
+            <li><a href="#about">ABOUT</a></li>
+        </ul>
+    </nav>
+
 
     <!-- メインコンテンツ -->
     <main>
-        <!-- ヒーローセクション：ページの顔となる最初の画面です -->
+        <!-- ヒーローセクション -->
         <section id="hero" class="hero">
-            <!-- ロゴ画像を表示します -->
             <img src="cocochill.png" alt="Cocochill ロゴ" class="hero__logo">
-            
             <div class="hero__scroll-down">
                 <p>SCROLL</p>
                 <span></span>
             </div>
         </section>
 
-        <!-- EATセクション：フードの紹介です -->
+        <!-- EATセクション -->
         <section id="eat" class="content-section fade-in-target">
             <h2 class="section-title">EAT</h2>
             <p class="section-subtitle">心も体も喜ぶ、美味しいごはん。</p>
             <div class="eat__grid">
-                <!-- 各フードアイテム -->
                 <div class="eat__item">
-                    <img src="https://placehold.co/300x200/8ecae6/fff?text=Food+1" alt="フード1の画像">
+                    <img src="https://placehold.co/300x200/333/ffd700?text=Food+1" alt="フード1の画像">
                     <h3>手作りおにぎりプレート</h3>
                     <p>愛情込めて握った、ふっくらおにぎり。</p>
                 </div>
                 <div class="eat__item">
-                    <img src="https://placehold.co/300x200/ffc107/fff?text=Food+2" alt="フード2の画像">
+                    <img src="https://placehold.co/300x200/333/ffd700?text=Food+2" alt="フード2の画像">
                     <h3>季節のフルーツサンド</h3>
                     <p>旬のフルーツをたっぷり使いました。</p>
                 </div>
                 <div class="eat__item">
-                    <img src="https://placehold.co/300x200/8ecae6/fff?text=Food+3" alt="フード3の画像">
+                    <img src="https://placehold.co/300x200/333/ffd700?text=Food+3" alt="フード3の画像">
                     <h3>ほっこり野菜スープ</h3>
                     <p>野菜の甘みが溶け込んだ優しい味。</p>
                 </div>
@@ -53,27 +83,26 @@
         </section>
 
         <!-- WORKSHOPセクション -->
-        <section id="artist" class="content-section fade-in-target">
+        <section id="workshop" class="content-section fade-in-target">
             <h2 class="section-title">WORKSHOP</h2>
             <p class="section-subtitle">みんなで一緒に、楽しい体験。</p>
             <div class="artist__grid">
-                <!-- 各ワークショップ -->
                 <div class="artist__item">
-                    <img src="https://placehold.co/200x200/ffc107/fff?text=Workshop+1" alt="ワークショップ1の画像">
+                    <img src="https://placehold.co/200x200/333/ffd700?text=Workshop+1" alt="ワークショップ1の画像">
                     <h4>アロマキャンドル作り</h4>
                 </div>
                 <div class="artist__item">
-                    <img src="https://placehold.co/200x200/8ecae6/fff?text=Workshop+2" alt="ワークショップ2の画像">
+                    <img src="https://placehold.co/200x200/333/ffd700?text=Workshop+2" alt="ワークショップ2の画像">
                     <h4>青空ヨガ教室</h4>
                 </div>
                 <div class="artist__item">
-                    <img src="https://placehold.co/200x200/ffc107/fff?text=Workshop+3" alt="ワークショップ3の画像">
+                    <img src="https://placehold.co/200x200/333/ffd700?text=Workshop+3" alt="ワークショップ3の画像">
                     <h4>オリジナルアクセサリー作り</h4>
                 </div>
             </div>
         </section>
 
-        <!-- DRINKセクション：ドリンクの紹介です -->
+        <!-- DRINKセクション -->
         <section id="drink" class="content-section fade-in-target">
             <h2 class="section-title">DRINK</h2>
             <p class="section-subtitle">心やすらぐ、特別な一杯を。</p>
@@ -84,11 +113,10 @@
             </ul>
         </section>
 
-        <!-- TICKETセクション：チケット情報です -->
+        <!-- TICKETセクション -->
         <section id="ticket" class="content-section fade-in-target">
             <h2 class="section-title">TICKET</h2>
             <div class="ticket__grid">
-                <!-- チケットの種類ごと -->
                 <div class="ticket-card">
                     <div class="ticket-card__header">
                         <h3>参加チケット</h3>
@@ -112,7 +140,7 @@
             </div>
         </section>
 
-        <!-- ABOUTセクション：イベント概要です -->
+        <!-- ABOUTセクション -->
         <section id="about" class="content-section fade-in-target">
             <h2 class="section-title">About</h2>
             <dl class="about__list">
@@ -126,7 +154,6 @@
                 <dd>Cocochill 実行委員会</dd>
             </dl>
         </section>
-
     </main>
 
     <!-- フッター -->
