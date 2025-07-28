@@ -8,7 +8,6 @@
     --white-text: #ffffff; /* ポイントで使用する白 */
     
     --font-heading: 'Mochiy Pop One', sans-serif; /* 見出し用フォント */
-    /* ↓↓↓ ここの行を変更しました ↓↓↓ */
     --font-body: 'M PLUS Rounded 1c', sans-serif; /* 本文用フォント */
 
     /* テキスト用のグラデーションを定義 */
