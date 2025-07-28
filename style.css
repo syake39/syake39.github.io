@@ -260,11 +260,13 @@ html {
 
 /* --- WORKSHOPセクション --- */
 .artist__grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 30px 20px;
+    display: grid;
+    /* 画面幅に応じて、アイテム（最小150px）を可能な限り均等に配置します */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px; /* アイテム間の余白を調整 */
+    max-width: 800px; /* グリッド全体の最大幅を設定 */
+    margin: 0 auto; /* グリッド自体を中央に配置 */
+    justify-items: center; /* グリッド内のアイテムを水平方向に中央揃え */
 }
 .artist__item img {
     width: 150px;
@@ -279,7 +281,7 @@ html {
     background-clip: text;
     color: transparent;
 }
-        
+                
 /* --- DRINKセクション --- */
 .drink__list {
     list-style: none;
