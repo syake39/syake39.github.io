@@ -1,12 +1,10 @@
 /* :rootでサイト全体で使う変数（色やフォント）を定義します */
 :root {
-    /* グラデーションの色を定義 */
-    --gradient-start: #ffc107; /* 黄色 */
-    --gradient-end: #8ecae6;   /* 水色 */
-    
-    --text-color: #ffffff;    /* テキストの色（白） */
-    --glow-color: rgba(255, 255, 255, 0.8); /* テキストの光彩効果 */
-    --secondary-bg-color: rgba(0, 0, 0, 0.3); /* セクションの背景色（半透明の黒） */
+    --main-bg-color: #000000; /* ベースの背景色（黒） */
+    --secondary-bg-color: #1a1a1a; /* セクションの背景色（やや明るい黒） */
+    --text-color: #ffd700;    /* テキストの色（黄色） */
+    --glow-color: rgba(255, 215, 0, 0.7); /* テキストの光彩効果（黄色） */
+    --white-text: #ffffff; /* ポイントで使用する白 */
     
     --font-heading: 'Mochiy Pop One', sans-serif; /* 見出し用フォント */
     --font-body: 'Noto Sans JP', sans-serif; /* 本文用フォント */
@@ -16,8 +14,8 @@
 body {
     margin: 0;
     padding-top: 80px; /* 固定ヘッダー分の余白を確保 */
-    /* 背景にグラデーションを適用 */
-    background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
+    /* 背景を黒に設定 */
+    background-color: var(--main-bg-color);
     color: var(--text-color);
     font-family: var(--font-body);
     line-height: 1.8; 
@@ -50,7 +48,7 @@ html {
     font-size: 1.8rem;
     color: var(--text-color);
     text-decoration: none;
-    text-shadow: 0 0 5px var(--glow-color); /* 光彩効果 */
+    text-shadow: 0 0 8px var(--glow-color); /* 光彩効果 */
 }
 .pc-nav ul {
     display: flex;
@@ -68,8 +66,8 @@ html {
     transition: color 0.3s, text-shadow 0.3s;
 }
 .pc-nav a:hover {
-    color: var(--gradient-start);
-    text-shadow: 0 0 10px var(--gradient-start);
+    color: var(--white-text);
+    text-shadow: 0 0 10px var(--white-text);
 }
 
 /* --- ハンバーガーメニュー --- */
@@ -166,8 +164,8 @@ html {
     font-family: var(--font-heading);
     font-size: clamp(2rem, 6vw, 3.5rem);
     margin-bottom: 20px;
-    color: var(--text-color);
-    text-shadow: 0 0 10px var(--glow-color);
+    color: var(--white-text);
+    text-shadow: 0 0 15px var(--glow-color);
 }
 .section-subtitle {
     font-size: 1.1rem;
@@ -187,7 +185,7 @@ html {
     background: var(--secondary-bg-color);
     padding: 20px;
     border-radius: 15px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 215, 0, 0.2);
 }
 .eat__item img {
     width: 100%;
@@ -245,7 +243,7 @@ html {
     background: var(--secondary-bg-color);
     border-radius: 15px;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 215, 0, 0.2);
 }
 .ticket-card__header {
     background: var(--text-color);
@@ -261,7 +259,7 @@ html {
 .ticket-card__price {
     font-size: 2.2rem;
     font-weight: bold;
-    color: var(--text-color);
+    color: var(--white-text);
 }
 .ticket-card__desc {
     color: var(--text-color);
@@ -283,7 +281,7 @@ html {
     background: var(--secondary-bg-color);
     padding: 40px;
     border-radius: 15px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 215, 0, 0.2);
 }
 .about__list dt {
     font-weight: bold;
