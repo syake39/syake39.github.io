@@ -3,11 +3,15 @@
     --main-bg-color: #000000; /* ベースの背景色（黒） */
     --secondary-bg-color: #1a1a1a; /* セクションの背景色（やや明るい黒） */
     --text-color: #ffd700;    /* テキストの色（黄色） */
+    --accent-color-1: #fffacd;  /* アクセントカラー（レモンシフォン） */
     --glow-color: rgba(255, 215, 0, 0.7); /* テキストの光彩効果（黄色） */
     --white-text: #ffffff; /* ポイントで使用する白 */
     
     --font-heading: 'Mochiy Pop One', sans-serif; /* 見出し用フォント */
     --font-body: 'Noto Sans JP', sans-serif; /* 本文用フォント */
+
+    /* テキスト用のグラデーションを定義 */
+    --text-gradient: linear-gradient(45deg, var(--text-color), var(--accent-color-1));
 }
 
 /* 基本的なページスタイル */
@@ -171,6 +175,10 @@ html {
     font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto 60px;
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 /* --- EATセクション --- */
@@ -195,11 +203,17 @@ html {
     margin-bottom: 15px;
 }
 .eat__item h3 {
-    color: var(--text-color);
     margin: 0 0 10px 0;
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 .eat__item p {
-    color: var(--text-color);
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 /* --- WORKSHOPセクション --- */
@@ -218,7 +232,10 @@ html {
 }
 .artist__item h4 {
     margin-top: 10px;
-    color: var(--text-color);
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
         
 /* --- DRINKセクション --- */
@@ -228,7 +245,10 @@ html {
     font-size: 1.8rem;
     font-family: var(--font-heading);
     line-height: 2;
-    color: var(--text-color);
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 /* --- TICKETセクション --- */
@@ -262,7 +282,10 @@ html {
     color: var(--white-text);
 }
 .ticket-card__desc {
-    color: var(--text-color);
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 .ticket-card__button {
     display: inline-block;
@@ -285,12 +308,18 @@ html {
 }
 .about__list dt {
     font-weight: bold;
-    color: var(--text-color);
     margin-top: 15px;
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 .about__list dd {
     margin-left: 0;
-    color: var(--text-color);
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 
