@@ -274,11 +274,7 @@ html {
     border: 5px solid var(--text-color);
 }
 .artist__item h4 {
-    margin-top: 10px;
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    display: none; /* アカウント名を非表示にします */
 }
 
 /* --- INSTAGRAMセクション --- */
