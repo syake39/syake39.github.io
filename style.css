@@ -261,12 +261,11 @@ html {
 /* --- WORKSHOPセクション --- */
 .artist__grid {
     display: grid;
-    /* 画面幅に応じて、アイテム（最小150px）を可能な限り均等に配置します */
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 40px; /* アイテム間の余白を調整 */
-    max-width: 800px; /* グリッド全体の最大幅を設定 */
-    margin: 0 auto; /* グリッド自体を中央に配置 */
-    justify-items: center; /* グリッド内のアイテムを水平方向に中央揃え */
+    gap: 40px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    justify-items: center; 
 }
 .artist__item img {
     width: 150px;
@@ -281,7 +280,62 @@ html {
     background-clip: text;
     color: transparent;
 }
-                
+
+/* --- INSTAGRAMセクション --- */
+.instagram__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.instagram__card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.instagram__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.instagram__card:hover img {
+    transform: scale(1.1);
+}
+.instagram__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: var(--white-text);
+    font-weight: bold;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.instagram__card:hover .instagram__overlay {
+    opacity: 1;
+}
+.instagram__button {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 15px 40px;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.instagram__button:hover {
+    background-color: var(--text-color);
+    color: var(--main-bg-color);
+}
+                        
 /* --- DRINKセクション --- */
 .drink__list {
     list-style: none;
