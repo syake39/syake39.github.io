@@ -29,6 +29,40 @@ html {
     scroll-behavior: smooth; /* スムーズスクロールを有効に */
 }
 
+/* --- ↓↓↓ オープニング画面のスタイルを追加しました ↓↓↓ --- */
+.loader-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    transition: opacity 1s, visibility 1s;
+}
+.loader-text {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 10vw, 5rem);
+    animation: text-fade-in 2s forwards;
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+@keyframes text-fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* JavaScriptでこのクラスを付与して、オープニング画面を消します */
+.loader-wrap.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
 /* --- ヘッダー --- */
 .header {
     width: 100%;
@@ -274,7 +308,11 @@ html {
     border: 5px solid var(--text-color);
 }
 .artist__item h4 {
-    display: none; /* アカウント名を非表示にします */
+    margin-top: 10px;
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 /* --- INSTAGRAMセクション --- */
