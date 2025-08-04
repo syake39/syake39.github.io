@@ -29,6 +29,38 @@ html {
     scroll-behavior: smooth; /* スムーズスクロールを有効に */
 }
 
+/* --- オープニング画面のスタイル --- */
+.loader-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    transition: opacity 1s, visibility 1s;
+}
+.loader-text {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 10vw, 5rem);
+    animation: text-fade-in 2s forwards;
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+@keyframes text-fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.loader-wrap.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
 /* --- ヘッダー --- */
 .header {
     width: 100%;
@@ -420,7 +452,7 @@ html {
     color: transparent;
 }
 
-/* --- ↓↓↓ ACCESSセクションのスタイルを追加しました ↓↓↓ --- */
+/* --- ACCESSセクションのスタイル --- */
 .map-container {
     max-width: 800px;
     margin: 0 auto;
@@ -432,8 +464,12 @@ html {
     width: 100%;
     height: 450px;
     border: 0;
-    /* 地図をダークモード風に表示するフィルター */
-    filter: grayscale(100%) invert(90%) contrast(80%);
+}
+.map-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--text-color);
+    text-decoration: underline;
 }
 
 /* --- フッター --- */
