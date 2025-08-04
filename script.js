@@ -1,3 +1,16 @@
+// --- ↓↓↓ オープニング画面の機能を追加しました ↓↓↓ ---
+// ページが完全に読み込まれたら実行します
+window.addEventListener('load', function() {
+    // ローダー要素を取得します
+    const loader = document.getElementById('loader');
+
+    // 2.5秒後（2500ミリ秒）に、ローダーに.fade-outクラスを付与します
+    setTimeout(function() {
+        loader.classList.add('fade-out');
+    }, 2500);
+});
+
+
 // --- ハンバーガーメニューの機能 ---
 const hamburger = document.getElementById('hamburger');
 const spNav = document.getElementById('sp-nav');
