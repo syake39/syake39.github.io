@@ -1,495 +1,155 @@
 /* :rootでサイト全体で使う変数（色やフォント）を定義します */
 :root {
-    --main-bg-color: #000000; /* ベースの背景色（黒） */
-    --secondary-bg-color: #1a1a1a; /* セクションの背景色（やや明るい黒） */
-    --text-color: #ffd700;    /* テキストの色（黄色） */
-    --accent-color-1: #fffacd;  /* アクセントカラー（レモンシフォン） */
-    --glow-color: rgba(255, 215, 0, 0.7); /* テキストの光彩効果（黄色） */
-    --white-text: #ffffff; /* ポイントで使用する白 */
+    --bg-color: #1a1a1a;      /* 背景色（黒に近いグレー） */
+    --text-color: #ffffff;    /* テキストの色（白） */
+    --accent-color: #f9ca24;  /* アクセントカラー（黄色） */
+    --button-red: #d63031;    /* ボタンの赤色 */
     
-    --font-heading: 'Mochiy Pop One', sans-serif; /* 見出し用フォント */
-    --font-body: 'M PLUS Rounded 1c', sans-serif; /* 本文用フォント */
-
-    /* テキスト用のグラデーションを定義 */
-    --text-gradient: linear-gradient(45deg, var(--text-color), var(--accent-color-1));
+    /* ドットゴシック16とNoto Sans JPを読み込んでいます */
+    --font-heading: 'DotGothic16', sans-serif; 
+    --font-body: 'Noto Sans JP', sans-serif;
 }
 
 /* 基本的なページスタイル */
 body {
     margin: 0;
-    padding-top: 80px; /* 固定ヘッダー分の余白を確保 */
-    /* 背景を黒に設定 */
-    background-color: var(--main-bg-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-body);
-    line-height: 1.8; 
-    overflow-x: hidden;
+    line-height: 1.8;
+    overflow-x: hidden; /* 横スクロールを防止 */
 }
-html {
-    scroll-behavior: smooth; /* スムーズスクロールを有効に */
-}
-
-/* --- ↓↓↓ オープニング画面のスタイルを追加しました ↓↓↓ --- */
-.loader-wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--main-bg-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 200;
-    transition: opacity 1s, visibility 1s;
-}
-.loader-text {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 10vw, 5rem);
-    animation: text-fade-in 2s forwards;
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-@keyframes text-fade-in {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-/* JavaScriptでこのクラスを付与して、オープニング画面を消します */
-.loader-wrap.fade-out {
-    opacity: 0;
-    visibility: hidden;
-}
-
-
-/* --- ヘッダー --- */
-.header {
-    width: 100%;
-    height: 80px;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-}
-.header__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: 0 40px;
-}
-.header__logo {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    color: var(--text-color);
-    text-decoration: none;
-    text-shadow: 0 0 8px var(--glow-color); /* 光彩効果 */
-}
-.pc-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.pc-nav li {
-    margin-left: 30px;
-}
-.pc-nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s, text-shadow 0.3s;
-}
-.pc-nav a:hover {
-    color: var(--white-text);
-    text-shadow: 0 0 10px var(--white-text);
-}
-
-/* --- ハンバーガーメニュー --- */
-.hamburger {
-    display: none;
-    width: 30px;
-    height: 21px;
-    position: relative;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-.hamburger span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: var(--text-color);
-    position: absolute;
-    transition: transform 0.3s, opacity 0.3s;
-}
-.hamburger span:nth-child(1) { top: 0; }
-.hamburger span:nth-child(2) { top: 9px; }
-.hamburger span:nth-child(3) { top: 18px; }
-
-.hamburger.is-active span:nth-child(1) {
-    top: 9px;
-    transform: rotate(45deg);
-}
-.hamburger.is-active span:nth-child(2) {
-    opacity: 0;
-}
-.hamburger.is-active span:nth-child(3) {
-    top: 9px;
-    transform: rotate(-45deg);
-}
-
-/* SP用ナビゲーション */
-.sp-nav {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 80px);
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px);
-    transform: translateX(100%);
-    transition: transform 0.3s;
-    z-index: 99;
-}
-.sp-nav.is-active {
-    transform: translateX(0);
-}
-.sp-nav ul {
-    list-style: none;
-    padding: 40px;
-    margin: 0;
-}
-.sp-nav li {
-    text-align: center;
-    margin-bottom: 30px;
-}
-.sp-nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
 
 /* --- ヒーローセクション --- */
 .hero {
-    height: calc(100vh - 80px);
+    height: 100vh; /* 画面の高さいっぱいに表示 */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-}
-.hero__logo {
-    max-width: 80%;
-    max-height: 60vh;
-}
-.hero__scroll-down {
-    position: absolute;
-    bottom: 30px;
     text-align: center;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
+    padding: 20px;
 }
-
-/* スクロールアニメーションのコンテナ */
-.hero__scroll-down span {
-    display: block;
-    width: 1px;
-    height: 50px;
-    background: rgba(255, 215, 0, 0.2); /* 線が動く薄い軌跡 */
-    margin: 10px auto 0;
-    position: relative;
-    overflow: hidden; /* はみ出した部分を隠す */
+.hero__button-image {
+    width: 200px;
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
-
-/* 実際に動く線 */
-.hero__scroll-down span::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* グラデーションで線の両端をぼかします */
-    background: linear-gradient(to bottom, 
-        transparent 0%, 
-        var(--text-color) 50%, 
-        transparent 100%);
-    animation: scroll-wipe 2.5s infinite ease-in-out;
+.hero__title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 8vw, 4rem); /* 画面幅に応じて文字サイズを調整 */
+    line-height: 1.4;
+    margin: 0;
 }
-
-/* 上から下に線が流れるアニメーション */
-@keyframes scroll-wipe {
-    0% {
-        transform: translateY(0%);
-    }
-    100% {
-        transform: translateY(200%);
-    }
-}
-
 
 /* --- コンテンツセクション共通 --- */
 .content-section {
-    padding: 120px 20px;
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 .section-title {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    margin-bottom: 20px;
-    color: var(--white-text);
-    text-shadow: 0 0 15px var(--glow-color);
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 30px;
 }
 .section-subtitle {
     font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto 60px;
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    margin-bottom: 40px;
 }
 
-/* --- EATセクション --- */
-.eat__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px; 
-    max-width: 1000px;
-    margin: 0 auto;
+/* --- CONCEPTセクション --- */
+.concept__text {
+    text-align: center;
+    line-height: 2.2;
 }
-.eat__item {
-    background: var(--secondary-bg-color);
-    padding: 20px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 215, 0, 0.2);
+.concept__text p {
+    margin-bottom: 2em;
 }
-.eat__item img {
-    width: 100%;
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-.eat__item h3 {
-    margin: 0 0 10px 0;
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-.eat__item p {
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-/* --- WORKSHOPセクション --- */
-.artist__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 40px; 
-    max-width: 800px; 
-    margin: 0 auto; 
-    justify-items: center; 
-}
-.artist__item img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid var(--text-color);
-}
-.artist__item h4 {
-    margin-top: 10px;
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-/* --- INSTAGRAMセクション --- */
-.instagram__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.concept__images {
+    display: flex;
+    justify-content: center;
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 30px 0;
 }
-.instagram__card {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    border-radius: 10px;
-}
-.instagram__card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-.instagram__card:hover img {
-    transform: scale(1.1);
-}
-.instagram__overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-    color: var(--white-text);
-    font-weight: bold;
-    text-align: left;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-.instagram__card:hover .instagram__overlay {
-    opacity: 1;
-}
-.instagram__button {
-    display: inline-block;
-    margin-top: 50px;
-    padding: 15px 40px;
-    border: 2px solid var(--text-color);
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 50px;
-    transition: background-color 0.3s, color 0.3s;
-}
-.instagram__button:hover {
-    background-color: var(--text-color);
-    color: var(--main-bg-color);
-}
-                        
-/* --- DRINKセクション --- */
-.drink__list {
-    list-style: none;
-    padding: 0;
-    font-size: 1.8rem;
-    font-family: var(--font-heading);
-    line-height: 2;
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+.concept__images img {
+    height: 150px;
+    width: auto;
 }
 
-/* --- TICKETセクション --- */
-.ticket__grid {
+/* --- GAMESセクション --- */
+.games__note {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-top: 40px;
+}
+
+/* --- MENUセクション --- */
+.menu__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-.ticket-card {
-    background: var(--secondary-bg-color);
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 215, 0, 0.2);
-}
-.ticket-card__header {
-    background: var(--text-color);
-    padding: 15px 25px;
-}
-.ticket-card__header h3 {
-    margin: 0;
-    color: #333;
-}
-.ticket-card__body {
-    padding: 25px;
-}
-.ticket-card__price {
-    font-size: 2.2rem;
-    font-weight: bold;
-    color: var(--white-text);
-}
-.ticket-card__desc {
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-.ticket-card__button {
-    display: inline-block;
-    background: var(--text-color);
-    color: #333;
-    padding: 15px 40px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* --- ABOUTセクション --- */
-.about__list {
-    max-width: 600px;
-    margin: 0 auto;
-    background: var(--secondary-bg-color);
-    padding: 40px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 215, 0, 0.2);
-}
-.about__list dt {
-    font-weight: bold;
-    margin-top: 15px;
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-.about__list dd {
-    margin-left: 0;
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-
-/* --- フッター --- */
-.footer {
-    padding: 80px 20px;
+    grid-template-columns: 1fr; /* スマホでは縦並び */
+    gap: 60px;
     text-align: center;
 }
-.footer__title {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    text-shadow: 0 0 10px var(--glow-color);
+/* PCでは横並びにする設定 */
+@media (min-width: 768px) {
+    .menu__grid {
+        grid-template-columns: 1fr 1fr; /* PCでは2カラム */
+        text-align: left;
+    }
 }
-.footer__logo {
+.menu__note {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+.menu__price-group {
+    margin-bottom: 40px;
+}
+.menu__price {
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu__list li {
+    margin-bottom: 10px;
+}
+
+/* --- ACCESSセクション --- */
+.access__info {
+    margin-bottom: 40px;
+}
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid var(--accent-color);
+}
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    filter: grayscale(100%) invert(90%) contrast(80%);
 }
 
 /* --- フェードインアニメーション --- */
 .fade-in-target {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    transform: translateY(30px);
+    transition: opacity 1s, transform 1s;
 }
 .fade-in {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* --- レスポンシブ対応 (768px以下) --- */
-@media (max-width: 768px) {
-    .pc-nav {
-        display: none;
-    }
-    .hamburger {
-        display: block;
-    }
-    .header__inner {
-        padding: 0 20px;
-    }
 }
