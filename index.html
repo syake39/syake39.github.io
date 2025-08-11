@@ -3,202 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocochill - イベントサイト</title>
+    <title>この夜だけは大人も遊んでいい</title>
 
     <!-- Google Fontsからフォントを読み込みます -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- CSSファイルを読み込みます -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ↓↓↓ オープニング画面を追加しました ↓↓↓ -->
-    <div class="loader-wrap" id="loader">
-        <div class="loader-text">Cocochill</div>
-    </div>
-
-    <!-- ヘッダー：画面上部に固定されます -->
-    <header class="header">
-        <div class="header__inner">
-            <a href="#" class="header__logo">Cocochill</a>
-            <!-- PC用のナビゲーション -->
-            <nav class="header__nav pc-nav">
-                <ul>
-                    <li><a href="#eat">EAT</a></li>
-                    <li><a href="#workshop">WORKSHOP</a></li>
-                    <li><a href="#instagram">INSTAGRAM</a></li>
-                    <li><a href="#drink">DRINK</a></li>
-                    <li><a href="#ticket">TICKET</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                </ul>
-            </nav>
-            <!-- ハンバーガーメニューボタン -->
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
-    <!-- スマホ用のナビゲーション（最初は非表示） -->
-    <nav class="sp-nav" id="sp-nav">
-        <ul>
-            <li><a href="#eat">EAT</a></li>
-            <li><a href="#workshop">WORKSHOP</a></li>
-            <li><a href="#instagram">INSTAGRAM</a></li>
-            <li><a href="#drink">DRINK</a></li>
-            <li><a href="#ticket">TICKET</a></li>
-            <li><a href="#about">ABOUT</a></li>
-        </ul>
-    </nav>
-
-
     <!-- メインコンテンツ -->
     <main>
-        <!-- ヒーローセクション -->
+        <!-- ヒーローセクション：ページの顔となる最初の画面です -->
         <section id="hero" class="hero">
-            <img src="cocochill.png" alt="Cocochill ロゴ" class="hero__logo">
-            <div class="hero__scroll-down">
-                <p>SCROLL</p>
-                <span></span>
-            </div>
+            <img src="buttn.jpg" alt="オフまで5分" class="hero__button-image">
+            <h1 class="hero__title">この夜だけは<br>大人も遊んでいい</h1>
         </section>
 
-        <!-- EATセクション -->
-        <section id="eat" class="content-section fade-in-target">
-            <h2 class="section-title">EAT</h2>
-            <p class="section-subtitle">心も体も喜ぶ、美味しいごはん。</p>
-            <div class="eat__grid">
-                <div class="eat__item">
-                    <img src="https://placehold.co/300x200/333/ffd700?text=Food+1" alt="フード1の画像">
-                    <h3>手作りおにぎりプレート</h3>
-                    <p>愛情込めて握った、ふっくらおにぎり。</p>
+        <!-- CONCEPTセクション：イベントのコンセプト紹介です -->
+        <section id="concept" class="content-section fade-in-target">
+            <h2 class="section-title">いつの間にか大人になってしまった、あなたへ</h2>
+            <div class="concept__text">
+                <p>この度は「オフまで5分」のサイトを<br>ご覧いただき、誠にありがとうございます。</p>
+                <p>日々、堅苦しく忙しい社会の中で<br>本当の自分を隠していませんか？</p>
+                <div class="concept__images">
+                    <img src="back_child_woman.png" alt="子供の頃の女の子">
+                    <img src="back_child_man.png" alt="子供の頃の男の子">
                 </div>
-                <div class="eat__item">
-                    <img src="https://placehold.co/300x200/333/ffd700?text=Food+2" alt="フード2の画像">
-                    <h3>季節のフルーツサンド</h3>
-                    <p>旬のフルーツをたっぷり使いました。</p>
+                <p>「大人になったら何になりたい？」</p>
+                <p>無邪気に夢を語った僕らは、いつの間にか<br>その答えを探すのをやめてしまったね。</p>
+                <div class="concept__images">
+                    <img src="back_woman.png" alt="大人の女性の後ろ姿">
+                    <img src="back_man.png" alt="大人の男性の後ろ姿">
                 </div>
-                <div class="eat__item">
-                    <img src="https://placehold.co/300x200/333/ffd700?text=Food+3" alt="フード3の画像">
-                    <h3>ほっこり野菜スープ</h3>
-                    <p>野菜の甘みが溶け込んだ優しい味。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- WORKSHOPセクション -->
-        <section id="workshop" class="content-section fade-in-target">
-            <h2 class="section-title">WORKSHOP</h2>
-            <p class="section-subtitle">みんなで一緒に、楽しい体験。</p>
-            <div class="artist__grid">
-                <div class="artist__item">
-                    <img src="https://placehold.co/200x200/333/ffd700?text=Workshop+1" alt="ワークショップ1の画像">
-                    <h4>アロマキャンドル作り</h4>
-                </div>
-                <div class="artist__item">
-                    <img src="https://placehold.co/200x200/333/ffd700?text=Workshop+2" alt="ワークショップ2の画像">
-                    <h4>青空ヨガ教室</h4>
-                </div>
-                <div class="artist__item">
-                    <img src="https://placehold.co/200x200/333/ffd700?text=Workshop+3" alt="ワークショップ3の画像">
-                    <h4>オリジナルアクセサリー作り</h4>
-                </div>
-                <div class="artist__item">
-                    <img src="https://placehold.co/200x200/333/ffd700?text=and+more..." alt="and more...">
-                    <h4>and more...</h4>
+                <p>疲れたよね。</p>
+                <p>オフまで、あと5分。<br>仕事のスイッチはもう切って大丈夫。</p>
+                <p>懐かしい遊びをアテに、<br>美味しいお酒と小料理をゆっくり楽しんで。<br>忘れていた「君」を、ここで思い出そう。</p>
+                 <div class="concept__images">
+                    <img src="wowman.png" alt="解放された女性">
+                    <img src="man.png" alt="解放された男性">
                 </div>
             </div>
         </section>
 
-        <!-- INSTAGRAMセクション -->
-        <section id="instagram" class="content-section fade-in-target">
-            <h2 class="section-title">Review from Instagram</h2>
-            <p class="section-subtitle">イベントの様子をチェック！</p>
-            <div class="instagram__grid">
-                <a href="https://www.instagram.com/syake_0309/" target="_blank" class="instagram__card">
-                    <img src="https://placehold.co/300x300/333/ffd700?text=Post+1" alt="Instagramの投稿1">
-                    <div class="instagram__overlay">@syake_0309</div>
-                </a>
-                <a href="https://www.instagram.com/syake_0309/" target="_blank" class="instagram__card">
-                    <img src="https://placehold.co/300x300/333/ffd700?text=Post+2" alt="Instagramの投稿2">
-                    <div class="instagram__overlay">@syake_0309</div>
-                </a>
-                <a href="https://www.instagram.com/syake_0309/" target="_blank" class="instagram__card">
-                    <img src="https://placehold.co/300x300/333/ffd700?text=Post+3" alt="Instagramの投稿3">
-                    <div class="instagram__overlay">@syake_0309</div>
-                </a>
-                <a href="https://www.instagram.com/syake_0309/" target="_blank" class="instagram__card">
-                    <img src="https://placehold.co/300x300/333/ffd700?text=Post+4" alt="Instagramの投稿4">
-                    <div class="instagram__overlay">@syake_0309</div>
-                </a>
-            </div>
-            <a href="https://www.instagram.com/syake_0309/" target="_blank" class="instagram__button">Instagramでもっと見る</a>
+        <!-- GAMESセクション：遊びの紹介です -->
+        <section id="games" class="content-section fade-in-target">
+            <h2 class="section-title">懐かしの遊び</h2>
+            <p class="section-subtitle">子供の頃、夢中になって遊んだ懐かしいゲームの数々。大人になった今だからこそ、あの頃の無邪気な気持ちに戻って本気で楽しもう。仲間と笑い合って、自然と心の距離が縮まります。</p>
+            <p class="games__note">詳細は当日のお楽しみ</p>
         </section>
 
-        <!-- DRINKセクション -->
-        <section id="drink" class="content-section fade-in-target">
-            <h2 class="section-title">DRINK</h2>
-            <p class="section-subtitle">心やすらぐ、特別な一杯を。</p>
-             <ul class="drink__list">
-                <li>自家製レモネード</li>
-                <li>オーガニックコーヒー</li>
-                <li>ハーブティー</li>
-            </ul>
-        </section>
-
-        <!-- TICKETセクション -->
-        <section id="ticket" class="content-section fade-in-target">
-            <h2 class="section-title">TICKET</h2>
-            <div class="ticket__grid">
-                <div class="ticket-card">
-                    <div class="ticket-card__header">
-                        <h3>参加チケット</h3>
+        <!-- MENUセクション：フードとドリンクの紹介です -->
+        <section id="menu" class="content-section fade-in-target">
+            <div class="menu__grid">
+                <!-- Food Menu -->
+                <div class="menu__category">
+                    <h2 class="section-title">Food</h2>
+                    <p class="menu__note">バケットとクラッカーは食べ放題</p>
+                    <div class="menu__price-group">
+                        <h3 class="menu__price">ALL 600yen</h3>
+                        <ul class="menu__list">
+                            <li>生ハムとサラミとチーズの盛り合わせ</li>
+                            <li>4種のパテ(サーモンチーズ、トマト、レバー)</li>
+                            <li>スモークとチーズ</li>
+                        </ul>
                     </div>
-                    <div class="ticket-card__body">
-                        <p class="ticket-card__price">¥2,000</p>
-                        <p class="ticket-card__desc">全てのワークショップに参加できます。</p>
-                        <a href="#" class="ticket-card__button">申し込む</a>
+                    <div class="menu__price-group">
+                        <h3 class="menu__price">ALL 300yen</h3>
+                        <ul class="menu__list">
+                            <li>サラミ入りポテトサラダ</li>
+                            <li>トマトとチーズのカプレーゼ</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="ticket-card">
-                    <div class="ticket-card__header">
-                        <h3>親子ペアチケット</h3>
+                <!-- Drink Menu -->
+                <div class="menu__category">
+                    <h2 class="section-title">Drink</h2>
+                    <div class="menu__price-group">
+                        <h3 class="menu__price">Alcohol - ALL 500yen</h3>
+                        <ul class="menu__list">
+                            <li>ビール</li>
+                            <li>ハイボール</li>
+                            <li>コークハイボール</li>
+                            <li>ジンジャーハイボール</li>
+                            <li>カシスオレンジ</li>
+                        </ul>
                     </div>
-                    <div class="ticket-card__body">
-                        <p class="ticket-card__price">¥3,000</p>
-                        <p class="ticket-card__desc">親子でお得に参加できるチケットです。</p>
-                        <a href="#" class="ticket-card__button">申し込む</a>
+                    <div class="menu__price-group">
+                        <h3 class="menu__price">Soft Drink</h3>
+                        <ul class="menu__list">
+                            <li>コーラ</li>
+                            <li>ジンジャーエール</li>
+                            <li>オレンジジュース</li>
+                            <li>ウーロン茶</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ABOUTセクション -->
-        <section id="about" class="content-section fade-in-target">
-            <h2 class="section-title">About</h2>
-            <dl class="about__list">
-                <dt>イベント名</dt>
-                <dd>Cocochill vol.1</dd>
-                <dt>日時</dt>
-                <dd>2025年9月20日(土) 11:00〜16:00</dd>
-                <dt>会場</dt>
-                <dd>神戸海辺の公園</dd>
-                 <dt>主催</dt>
-                <dd>Cocochill 実行委員会</dd>
-            </dl>
+        <!-- ACCESSセクション：会場へのアクセス情報です -->
+        <section id="access" class="content-section fade-in-target">
+            <h2 class="section-title">Access</h2>
+            <div class="access__info">
+                <p>兵庫県神戸市中央区栄町通1-3-22</p>
+                <p>神戸線(大阪~神戸) 元町駅 徒歩5分</p>
+                <p>阪神本線 元町駅 徒歩5分</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.088319206715!2d135.1878898763261!3d34.67773298334648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008f0e4130f1d7%3A0x6a1001402a76282!2z44CSNjUwLTAwMjMg5YW1庫県神戸市中央区栄町通78;丁目３&minus;２２ Veck!5e0!3m2!1sja!2sjp!4v1722861000000!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
     </main>
-
-    <!-- フッター -->
-    <footer class="footer fade-in-target">
-        <p class="footer__title">Thank you!</p>
-        <p>皆様のご来場を心よりお待ちしております。</p>
-        <div class="footer__logo">Cocochill</div>
-    </footer>
 
     <!-- JavaScriptファイルを読み込みます -->
     <script src="script.js"></script>
