@@ -17,14 +17,15 @@ body {
     overflow-x: hidden; /* 横スクロールを防止 */
 }
 
-/* PC表示時の左右の余白 */
+/* PC表示時の左右の余白とスマホ画面の枠組み */
 @media (min-width: 640px) {
     body {
-        padding: 0 40px; /* PCでは左右に余白を追加 */
+        background-color: #f0f0f0; /* PCの背景は薄いグレーに */
     }
-    main {
+    .site-wrapper {
         max-width: 480px; /* スマホ画面の幅にコンテンツを制限 */
         margin: 0 auto;
+        background-color: var(--bg-color);
         box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
 }
@@ -38,7 +39,8 @@ body {
 }
 @media (min-width: 640px) {
     .header {
-        right: calc(50% - 240px); /* PC表示時にコンテンツエリアの右上に配置 */
+        /* PC表示時にコンテンツエリアの右上に配置 */
+        right: calc(50% - 220px); 
     }
 }
 .hamburger {
@@ -77,19 +79,18 @@ body {
 }
 .hero__subtitle-image {
     position: absolute;
-    top: 40px;
-    left: 40px;
-    width: 160px; /* 画像サイズを調整 */
+    top: 20px;
+    left: 20px;
+    width: 80px; /* 画像サイズを調整 */
     height: auto;
 }
 .hero__title {
     font-family: var(--font-heading);
     font-size: clamp(1.8rem, 5vw, 2.5rem);
-    line-height: 1.5;
+    line-height: 1.7; /* 文字間隔を調整 */
     margin: 0;
     writing-mode: vertical-rl; /* 縦書き */
-    height: 280px; /* 縦書きの高さを確保 */
-    /* 「い」だけ改行されないように調整 */
+    height: 320px; /* 縦書きの高さを確保 */
     letter-spacing: 0.1em;
 }
 .hero__images {
@@ -243,4 +244,3 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-
