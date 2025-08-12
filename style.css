@@ -17,12 +17,29 @@ body {
     overflow-x: hidden; /* 横スクロールを防止 */
 }
 
+/* PC表示時の左右の余白 */
+@media (min-width: 640px) {
+    body {
+        padding: 0 40px; /* PCでは左右に余白を追加 */
+    }
+    main {
+        max-width: 480px; /* スマホ画面の幅にコンテンツを制限 */
+        margin: 0 auto;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+}
+
 /* --- ヘッダー --- */
 .header {
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 100;
+}
+@media (min-width: 640px) {
+    .header {
+        right: calc(50% - 240px); /* PC表示時にコンテンツエリアの右上に配置 */
+    }
 }
 .hamburger {
     width: 30px;
@@ -44,20 +61,25 @@ body {
 
 /* --- ヒーローセクション --- */
 .hero {
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* 上下いっぱいに配置 */
     align-items: center;
-    padding: 80px 20px 40px;
-    min-height: 80vh;
+    padding: 20px;
+    min-height: 90vh;
 }
 .hero__title-group {
+    width: 100%;
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 40px;
+    justify-content: center;
+    margin-top: 60px; /* 上からの余白 */
 }
 .hero__subtitle-image {
-    width: 100px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px; /* 画像サイズを調整 */
     height: auto;
 }
 .hero__title {
@@ -67,12 +89,14 @@ body {
     margin: 0;
     writing-mode: vertical-rl; /* 縦書き */
     height: 280px; /* 縦書きの高さを確保 */
+    /* 「い」だけ改行されないように調整 */
+    letter-spacing: 0.1em;
 }
 .hero__images {
     display: flex;
     gap: 20px;
     align-items: flex-end;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .hero__image-woman, .hero__image-man {
     height: 150px;
@@ -101,7 +125,7 @@ body {
 /* --- CONCEPTセクション --- */
 .concept__box {
     border: 1px solid var(--text-color);
-    padding: 20px;
+    padding: 30px 20px;
 }
 .concept__text {
     line-height: 2.2;
