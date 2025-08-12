@@ -77,9 +77,9 @@ body {
 }
 .hero__subtitle-image {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 80px; /* 画像サイズを調整 */
+    top: 40px;
+    left: 40px;
+    width: 160px; /* 画像サイズを調整 */
     height: auto;
 }
 .hero__title {
@@ -243,3 +243,4 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
