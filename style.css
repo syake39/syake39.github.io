@@ -72,7 +72,7 @@ body {
     min-height: 90vh;
 }
 .hero__title-group {
-    width: 100%;
+    width: 120%;
     display: flex;
     justify-content: center;
     margin-top: 60px; /* 上からの余白 */
@@ -244,3 +244,4 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
