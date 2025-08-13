@@ -7,6 +7,10 @@
     --font-body: 'Noto Sans JP', sans-serif;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
 /* 基本的なページスタイル */
 body {
     margin: 0;
@@ -244,4 +248,5 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
 
