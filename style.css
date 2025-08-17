@@ -7,29 +7,25 @@
     --font-body: 'Noto Sans JP', sans-serif;
 }
 
-.no-wrap {
-  white-space: nowrap;
-}
-
 /* 基本的なページスタイル */
 body {
     margin: 0;
-    background-color: var(--bg-color);
+    background-color: #f0f0f0; /* PC表示時の背景色 */
     color: var(--text-color);
     font-family: var(--font-body);
     line-height: 1.8;
     overflow-x: hidden; /* 横スクロールを防止 */
 }
 
+.site-wrapper {
+    background-color: var(--bg-color);
+}
+
 /* PC表示時の左右の余白とスマホ画面の枠組み */
 @media (min-width: 640px) {
-    body {
-        background-color: #f0f0f0; /* PCの背景は薄いグレーに */
-    }
     .site-wrapper {
         max-width: 480px; /* スマホ画面の幅にコンテンツを制限 */
         margin: 0 auto;
-        background-color: var(--bg-color);
         box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
 }
@@ -76,7 +72,7 @@ body {
     min-height: 90vh;
 }
 .hero__title-group {
-    width: 120%;
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 60px; /* 上からの余白 */
@@ -90,12 +86,13 @@ body {
 }
 .hero__title {
     font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 400; /* 細いフォントウェイト */
+    font-size: 2rem; /* 文字サイズを調整 */
     line-height: 1.7; /* 文字間隔を調整 */
     margin: 0;
     writing-mode: vertical-rl; /* 縦書き */
     height: 320px; /* 縦書きの高さを確保 */
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em; /* 文字と文字の間隔を調整 */
 }
 .hero__images {
     display: flex;
@@ -248,5 +245,3 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-
-
