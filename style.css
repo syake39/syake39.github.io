@@ -178,28 +178,10 @@ body {
 }
 
 /* --- CONCEPTセクション --- */
-.concept__box {
-    border: 1px solid var(--text-color);
-    padding: 30px 20px;
-}
-.concept__text {
-    line-height: 2.2;
-    text-align: left;
-}
-.concept__text p {
-    margin-top: 0;
-    margin-bottom: 1.5em;
-}
-.concept__images-bottom {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-.concept__images-bottom img {
-    height: 120px;
-    width: auto;
+.concept__mail-image {
+    width: 100%; /* 横幅を画面いっぱいに */
+    height: auto; /* 高さは自動調整 */
+    display: block; /* 画像下の余白を消す */
 }
 
 /* --- GAMESセクション --- */
