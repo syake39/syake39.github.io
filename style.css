@@ -216,7 +216,7 @@ body {
     margin-top: 40px;
 }
 .highlight {
-    background-color: #f5d142;
+    background-color: #fffacd; /* 明るい黄色に変更 */
     padding: 2px 5px;
 }
 
