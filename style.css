@@ -187,6 +187,9 @@ body {
 }
 
 /* --- GAMESセクション --- */
+#games {
+    text-align: center; /* セクション全体を中央揃えに */
+}
 .games__title::after {
     content: '';
     display: block;
@@ -204,7 +207,7 @@ body {
     flex-wrap: wrap;
 }
 .games__image {
-    max-width: 45%;
+    max-width: 35%; /* 画像サイズを小さく調整 */
     height: auto;
 }
 .games__note {
