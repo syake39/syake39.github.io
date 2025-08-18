@@ -202,12 +202,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 40px; /* 間の距離を広げる */
     margin: 40px 0;
     flex-wrap: wrap;
 }
 .games__image {
-    max-width: 35%; /* 画像サイズを小さく調整 */
+    max-width: 30%; /* 画像サイズをさらに小さく調整 */
     height: auto;
 }
 .games__note {
