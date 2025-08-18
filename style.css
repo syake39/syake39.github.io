@@ -343,11 +343,11 @@ body {
 }
 
 /* --- FAQセクション --- */
-.faq-item {
-    margin-bottom: 20px;
-}
-.faq-question {
-    font-weight: bold;
+.faq-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* --- FOOTERセクション --- */
