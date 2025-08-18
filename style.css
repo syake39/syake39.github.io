@@ -356,12 +356,24 @@ body {
     text-align: center;
     border-top: 1px solid #ddd;
 }
-.footer__button-image {
-    width: 250px;
-    max-width: 70%;
-    height: auto;
-    border-radius: 10px;
+.footer__title::after {
+    content: '';
+    display: block;
+    width: 20%;
+    height: 3px;
+    background-color: #f5d142;
+    margin: 10px auto 30px;
 }
+.footer__insta-icon {
+    width: 60px;
+    height: auto;
+    margin-top: 20px;
+    transition: opacity 0.3s;
+}
+.footer__insta-icon:hover {
+    opacity: 0.7;
+}
+
 
 /* --- フェードインアニメーション --- */
 .fade-in-target {
