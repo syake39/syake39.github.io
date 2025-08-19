@@ -189,6 +189,7 @@ body {
 /* --- GAMESセクション --- */
 #games .section-subtitle {
     text-align: left; /* 左揃えに変更 */
+    font-size: 0.95rem; /* 文字サイズを少し小さくして改行を調整 */
 }
 .games__title {
     display: block; /* 中央揃えのためにブロック要素に変更 */
