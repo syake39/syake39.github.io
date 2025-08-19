@@ -312,6 +312,18 @@ body {
 }
 
 /* --- TICKETセクション --- */
+#ticket {
+    text-align: center;
+}
+#ticket .section-title::after,
+#access .section-title::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background-color: #f5d142;
+    margin: 10px auto 0;
+}
 .ticket-link {
     display: block; /* aタグをブロック要素にして幅を持たせる */
     max-width: 500px; /* 画像が大きくなりすぎないように最大幅を指定 */
@@ -331,6 +343,9 @@ body {
 }
 
 /* --- ACCESSセクション --- */
+#access {
+    text-align: center;
+}
 .access__info {
     text-align: center;
     margin-bottom: 30px;
@@ -389,4 +404,3 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-
