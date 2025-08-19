@@ -187,8 +187,12 @@ body {
 }
 
 /* --- GAMESセクション --- */
-#games {
-    text-align: center; /* セクション全体を中央揃えに */
+#games .section-subtitle {
+    text-align: left; /* 左揃えに変更 */
+}
+.games__title {
+    display: block; /* 中央揃えのためにブロック要素に変更 */
+    text-align: center;
 }
 .games__title::after {
     content: '';
@@ -385,3 +389,4 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
