@@ -384,6 +384,9 @@ body {
     background-color: #f5d142;
     margin: 10px auto 30px;
 }
+.footer-message p {
+    margin: 0;
+}
 .footer__insta-icon {
     width: 60px;
     height: auto;
