@@ -272,7 +272,7 @@ body {
     text-align: center;
 }
 .drink-item__image {
-    max-width: 100px; /* 80pxから100pxに変更 */
+    max-width: 120px; /* 100pxから120pxに変更 */
     height: auto;
 }
 .drink-item__title {
