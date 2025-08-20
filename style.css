@@ -241,18 +241,16 @@ body {
 }
 .food-item-centered {
     margin-top: 30px;
-    text-align: left;
+    text-align: center;
 }
 .food-item__image--centered {
     width: 120px;
     height: auto;
     margin-bottom: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .food-item__text--centered {
     text-align: left;
+    display: inline-block;
 }
 .food-item__main-text {
     margin: 0;
