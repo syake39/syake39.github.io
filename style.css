@@ -227,9 +227,6 @@ body {
 
 
 /* --- MENUセクション --- */
-#menu .menu__category {
-    text-align: left;
-}
 .menu__title {
     display: block;
     text-align: center;
@@ -247,61 +244,60 @@ body {
     text-align: center;
 }
 .food-item__image--centered {
-    width: 120px; /* 150pxから120pxに変更 */
+    width: 120px;
     height: auto;
     margin-bottom: 15px;
 }
 .food-item__text--centered {
-    text-align: center;
+    text-align: left;
+    display: inline-block;
 }
 .food-item__main-text {
     margin: 0;
-    font-size: 0.9rem; /* 1remから0.9remに変更 */
+    font-size: 0.9rem;
 }
 .food-item__note-text {
     margin: 5px 0 0 0;
-    font-size: 0.75rem; /* 0.8remから0.75remに変更 */
+    font-size: 0.75rem;
     line-height: 1.6;
     color: #555;
 }
 .drink-item {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    margin-top: 30px;
+    margin-top: 20px;
+}
+.drink-item__text {
+    order: 1;
     text-align: left;
 }
+.drink-item__price {
+    order: 2;
+    text-align: right;
+    padding-left: 20px;
+}
 .drink-item__image-wrapper {
-    text-align: center;
+    order: 3;
+}
+.drink-item__image-wrapper:empty {
+    display: none;
 }
 .drink-item__image {
-    max-width: 120px; /* 100pxから120pxに変更 */
+    max-width: 100px;
     height: auto;
 }
 .drink-item__title {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.drink-item__price {
-    text-align: right;
+    display: none;
 }
 .menu__grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
 }
-.menu__note {
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.menu__price-group {
-    margin-bottom: 30px;
-}
 .menu__price {
     font-family: var(--font-heading);
-    font-size: 1.2rem; /* 1.3remから1.2remに変更 */
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 .menu__list {
@@ -310,7 +306,7 @@ body {
     margin: 0;
 }
 .menu__list li {
-    margin-bottom: 5px; /* 8pxから5pxに変更 */
+    margin-bottom: 5px;
     font-size: 0.9rem;
 }
 
