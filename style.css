@@ -228,6 +228,10 @@ body {
 
 /* --- MENUセクション --- */
 #menu .menu__category {
+    text-align: left;
+}
+.menu__title {
+    display: block;
     text-align: center;
 }
 .menu__title::after {
@@ -262,7 +266,7 @@ body {
 }
 .drink-item {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
     align-items: center;
     gap: 10px;
     margin-top: 30px;
