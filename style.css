@@ -364,7 +364,7 @@ body {
 }
 .access__map-image {
     width: 100%;
-    max-width: 400px;
+    max-width: 350px; /* 400pxから350pxに変更 */
     height: auto;
     margin: 20px 0;
 }
@@ -375,7 +375,7 @@ body {
     margin-top: 20px;
 }
 .access__photo {
-    width: 48%;
+    width: 45%; /* 48%から45%に変更 */
     height: auto;
     border-radius: 10px;
 }
