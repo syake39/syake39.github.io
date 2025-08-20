@@ -241,16 +241,18 @@ body {
 }
 .food-item-centered {
     margin-top: 30px;
-    text-align: center;
+    text-align: left;
 }
 .food-item__image--centered {
     width: 120px;
     height: auto;
     margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .food-item__text--centered {
     text-align: left;
-    display: inline-block;
 }
 .food-item__main-text {
     margin: 0;
@@ -266,29 +268,26 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
-.drink-item__text {
-    order: 1;
-    text-align: left;
+.drink-item .menu__list {
+    flex-grow: 1;
 }
-.drink-item__price {
-    order: 2;
+.drink-item__visuals {
     text-align: right;
-    padding-left: 20px;
+    flex-shrink: 0;
+    margin-left: 20px;
 }
-.drink-item__image-wrapper {
-    order: 3;
-}
-.drink-item__image-wrapper:empty {
-    display: none;
+.drink-item__visuals .menu__price {
+    text-align: left;
+    margin-bottom: 5px;
 }
 .drink-item__image {
-    max-width: 100px;
+    max-width: 80px;
     height: auto;
 }
-.drink-item__title {
-    display: none;
+.soft-drink-image {
+    max-width: 60px;
 }
 .menu__grid {
     display: grid;
