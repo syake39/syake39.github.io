@@ -238,28 +238,25 @@ body {
     background-color: #f5d142;
     margin: 10px auto 0;
 }
-.food-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.food-item-centered {
     margin-top: 30px;
-    text-align: left;
+    text-align: center;
 }
-.food-item__image {
-    width: 120px;
+.food-item__image--centered {
+    width: 120px; /* 150pxから120pxに変更 */
     height: auto;
-    flex-shrink: 0;
+    margin-bottom: 15px;
 }
-.food-item__text {
-    flex-grow: 1;
+.food-item__text--centered {
+    text-align: center;
 }
 .food-item__main-text {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.9rem; /* 1remから0.9remに変更 */
 }
 .food-item__note-text {
     margin: 5px 0 0 0;
-    font-size: 0.8rem;
+    font-size: 0.75rem; /* 0.8remから0.75remに変更 */
     line-height: 1.6;
     color: #555;
 }
@@ -300,8 +297,8 @@ body {
 }
 .menu__price {
     font-family: var(--font-heading);
-    font-size: 1.3rem;
-    margin-bottom: 15px;
+    font-size: 1.2rem; /* 1.3remから1.2remに変更 */
+    margin-bottom: 10px;
 }
 .menu__list {
     list-style: none;
@@ -309,7 +306,8 @@ body {
     margin: 0;
 }
 .menu__list li {
-    margin-bottom: 8px;
+    margin-bottom: 5px; /* 8pxから5pxに変更 */
+    font-size: 0.9rem;
 }
 
 /* --- TICKETセクション --- */
