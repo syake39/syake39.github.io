@@ -241,18 +241,16 @@ body {
 }
 .food-item-centered {
     margin-top: 30px;
-    text-align: left;
+    text-align: center;
 }
 .food-item__image--centered {
     width: 120px;
     height: auto;
     margin-bottom: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .food-item__text--centered {
     text-align: left;
+    display: inline-block;
 }
 .food-item__main-text {
     margin: 0;
@@ -266,18 +264,18 @@ body {
 }
 .drink-item {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* 中央揃えに変更 */
     align-items: center;
     margin-top: 30px;
-    padding: 0 20px;
+    gap: 20px; /* 要素間のスペースを追加 */
 }
 .drink-item .menu__list {
-    flex-grow: 1;
+    flex-grow: 0; /* 自動で伸びないように変更 */
+    text-align: left;
 }
 .drink-item__visuals {
     text-align: right;
     flex-shrink: 0;
-    margin-left: 20px;
 }
 .drink-item__visuals .menu__price {
     text-align: left;
