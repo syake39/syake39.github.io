@@ -3,7 +3,7 @@
     --bg-color: #ffffff;      /* 背景色（白） */
     --text-color: #000000;    /* テキストの色（黒） */
     
-    --font-heading: 'Shippori Mincho', serif; 
+    --font-heading: 'Noto Sans JP', sans-serif; 
     --font-body: 'Noto Sans JP', sans-serif;
 }
 
