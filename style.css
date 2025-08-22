@@ -244,61 +244,23 @@ body {
     background-color: #f5d142;
     margin: 10px auto 0;
 }
-.food-images-container {
+.food-images-container,
+.drink-images-container {
     text-align: center;
     margin-top: 30px;
 }
-.food-image {
+.food-image,
+.drink-image {
     width: 90%;
     max-width: 350px;
     height: auto;
     display: block;
     margin: 0 auto 20px;
 }
-.drink-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
-    padding: 0 20px;
-}
-.drink-item .menu__list {
-    flex-grow: 1;
-}
-.drink-item__visuals {
-    text-align: right;
-    flex-shrink: 0;
-    margin-left: 20px;
-}
-.drink-item__visuals .menu__price {
-    text-align: left;
-    margin-bottom: 5px;
-}
-.drink-item__image {
-    max-width: 60px;
-    height: auto;
-}
-.soft-drink-image {
-    max-width: 40px;
-}
 .menu__grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
-}
-.menu__price {
-    font-family: var(--font-heading);
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-.menu__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.menu__list li {
-    margin-bottom: 5px;
-    font-size: 0.9rem;
 }
 
 /* --- TICKETセクション --- */
