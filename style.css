@@ -199,7 +199,7 @@ body {
 .games__title::after {
     content: '';
     display: block;
-    width: 50%;
+    width: 100%;
     height: 3px;
     background-color: #f5d142;
     margin: 10px auto 0;
@@ -232,14 +232,13 @@ body {
     padding-left: 0;
     padding-right: 0;
 }
-.menu__title {
-    display: block;
+#menu .menu__category {
     text-align: center;
 }
 .menu__title::after {
     content: '';
     display: block;
-    width: 50%;
+    width: 100%;
     height: 3px;
     background-color: #f5d142;
     margin: 10px auto 0;
@@ -271,7 +270,7 @@ body {
 #access .section-title::after {
     content: '';
     display: block;
-    width: 50%;
+    width: 100%;
     height: 3px;
     background-color: #f5d142;
     margin: 10px auto 0;
@@ -351,7 +350,7 @@ body {
 .footer__title::after {
     content: '';
     display: block;
-    width: 20%;
+    width: 100%;
     height: 3px;
     background-color: #f5d142;
     margin: 10px auto 30px;
