@@ -228,6 +228,10 @@ body {
 
 
 /* --- MENUセクション --- */
+#menu {
+    padding-left: 0;
+    padding-right: 0;
+}
 .menu__title {
     display: block;
     text-align: center;
@@ -240,18 +244,23 @@ body {
     background-color: #f5d142;
     margin: 10px auto 0;
 }
+.food-images-container {
+    text-align: center;
+    margin-top: 30px;
+}
 .food-image {
-    width: 100%;
-    max-width: 380px;
+    width: 90%;
+    max-width: 350px;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 20px;
 }
 .drink-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
+    padding: 0 20px;
 }
 .drink-item .menu__list {
     flex-grow: 1;
