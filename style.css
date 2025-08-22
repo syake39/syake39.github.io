@@ -246,7 +246,7 @@ body {
     align-items: center;
 }
 .food-item__image--centered {
-    width: 120px;
+    width: 100px; /* 120pxから100pxに変更 */
     height: auto;
     margin-bottom: 15px;
 }
