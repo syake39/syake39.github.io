@@ -135,7 +135,7 @@ body {
     height: auto;
 }
 .hero__title {
-    font-family: var(--font-heading);
+    font-family: 'Shippori Mincho', serif; /* 明朝体に戻します */
     font-weight: 400; /* 細いフォントウェイト */
     font-size: 2rem; /* 文字サイズを調整 */
     line-height: 1.7; /* 文字間隔を調整 */
