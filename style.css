@@ -161,7 +161,8 @@ body {
 /* --- コンテンツセクション共通 --- */
 .content-section {
     padding: 60px 20px;
-    max-width: 600px;
+    max-width: 100%;
+    box-sizing: border-box;
     margin: 0 auto;
     border-top: 1px solid #ddd;
 }
@@ -241,7 +242,7 @@ body {
 }
 .food-image {
     width: 100%;
-    max-width: 400px;
+    max-width: 380px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -251,7 +252,6 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
-    padding: 0 20px;
 }
 .drink-item .menu__list {
     flex-grow: 1;
@@ -266,11 +266,11 @@ body {
     margin-bottom: 5px;
 }
 .drink-item__image {
-    max-width: 80px;
+    max-width: 60px;
     height: auto;
 }
 .soft-drink-image {
-    max-width: 50px;
+    max-width: 40px;
 }
 .menu__grid {
     display: grid;
