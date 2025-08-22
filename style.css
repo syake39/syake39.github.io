@@ -313,6 +313,13 @@ body {
 }
 
 /* --- FOOTERセクション --- */
+.footer-section {
+    padding: 60px 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .footer-message p {
     margin: 0;
 }
