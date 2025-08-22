@@ -165,6 +165,7 @@ body {
     box-sizing: border-box;
     margin: 0 auto;
     border-top: 1px solid #ddd;
+    text-align: center; /* セクション内の要素を中央揃えにするための基本設定 */
 }
 .section-title {
     font-family: var(--font-heading);
@@ -172,7 +173,15 @@ body {
     margin-bottom: 30px;
     text-align: center;
     position: relative;
-    display: inline-block;
+    display: inline-block; /* 文字幅に合わせるため */
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100%; /* 文字幅に合わせる */
+    height: 3px;
+    background-color: #f5d142;
+    margin: 10px auto 0;
 }
 .section-subtitle {
     text-align: center;
@@ -191,18 +200,6 @@ body {
 #games .section-subtitle {
     text-align: left; /* 左揃えに変更 */
     font-size: 0.95rem; /* 文字サイズを少し小さくして改行を調整 */
-}
-.games__title {
-    display: block; /* 中央揃えのためにブロック要素に変更 */
-    text-align: center;
-}
-.games__title::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #f5d142;
-    margin: 10px auto 0;
 }
 .games__images {
     display: flex;
@@ -232,17 +229,6 @@ body {
     padding-left: 0;
     padding-right: 0;
 }
-#menu .menu__category {
-    text-align: center;
-}
-.menu__title::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #f5d142;
-    margin: 10px auto 0;
-}
 .food-images-container,
 .drink-images-container {
     text-align: center;
@@ -250,8 +236,8 @@ body {
 }
 .food-image,
 .drink-image {
-    width: 100%;
-    max-width: 400px;
+    width: 90%;
+    max-width: 350px;
     height: auto;
     display: block;
     margin: 0 auto 20px;
@@ -263,18 +249,6 @@ body {
 }
 
 /* --- TICKETセクション --- */
-#ticket {
-    text-align: center;
-}
-#ticket .section-title::after,
-#access .section-title::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #f5d142;
-    margin: 10px auto 0;
-}
 .ticket-link {
     display: block; /* aタグをブロック要素にして幅を持たせる */
     max-width: 500px; /* 画像が大きくなりすぎないように最大幅を指定 */
@@ -306,9 +280,6 @@ body {
 }
 
 /* --- ACCESSセクション --- */
-#access {
-    text-align: center;
-}
 .access__info {
     text-align: center;
     margin-bottom: 30px;
@@ -342,19 +313,6 @@ body {
 }
 
 /* --- FOOTERセクション --- */
-.footer-section {
-    padding: 60px 20px;
-    text-align: center;
-    border-top: 1px solid #ddd;
-}
-.footer__title::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #f5d142;
-    margin: 10px auto 30px;
-}
 .footer-message p {
     margin: 0;
 }
