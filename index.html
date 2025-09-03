@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>この夜だけは大人も遊んでいい</title>
-
-    <!-- Google Fontsからフォントを読み込みます -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- CSSファイルを読み込みます -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,7 +18,6 @@
                 <span></span>
             </button>
         </header>
-        <!-- ハンバーガーメニューの中身 -->
         <nav class="sp-nav" id="sp-nav">
             <ul>
                 <li><a href="#hero">TOP</a></li>
@@ -35,15 +30,14 @@
             </ul>
         </nav>
 
-        <!-- メインコンテンツ -->
         <main>
-            <!-- ヒーローセクション：ページの顔となる最初の画面です -->
+            <!-- Hero Section -->
             <section id="hero" class="hero">
                 <div class="hero__title-group">
                     <img src="rogo.png" class="hero__subtitle-image" alt="オフまで5分">
                     <h1 class="hero__title">
-                        <span>大人も遊んでいい</span>
                         <span>この夜だけは</span>
+                        <span>大人も遊んでいい</span>
                     </h1>
                 </div>
                 <div class="hero__images">
@@ -52,49 +46,41 @@
                 </div>
             </section>
 
-            <!-- CONCEPTセクション：イベントのコンセプト紹介です -->
+            <!-- Concept Section -->
             <section id="concept" class="content-section fade-in-target">
                  <img src="mail2.png" alt="いつの間にか大人になってしまった、あなたへ" class="concept__mail-image">
             </section>
 
-            <!-- GAMESセクション：遊びの紹介です -->
+            <!-- Games Section -->
             <section id="games" class="content-section fade-in-target">
                 <h2 class="section-title games__title">懐かしの遊び</h2>
-                <p class="section-subtitle">子供の頃、夢中になった懐かしい遊びの数々。<br>大人になった今だからこそ、あの頃の無邪気な気持ちに戻って本気で楽しもう。<br>みんなと笑い合って、自然と心の距離が縮まります。</p>
+                <p class="section-subtitle">子供の頃、夢中になって遊んだ懐かしいゲームの数々。<br>大人になった今だからこそ、あの頃の無邪気な気持ちに戻って本気で楽しもう。<br>みんなと笑い合って、自然と心の距離が縮まります。</p>
                 <div class="games__images">
-                    <img src="toy1.png" alt="おはじき" class="games__image">
-                    <img src="toy2.png" alt="交換日記" class="games__image">
+                    <img src="toy1.jpg" alt="懐かしいおもちゃ1" class="games__image">
+                    <img src="toy2.jpg" alt="懐かしいおもちゃ2" class="games__image">
                 </div>
                 <p class="games__note"><span class="highlight">詳細は当日のお楽しみ</span></p>
             </section>
 
-            <!-- MENUセクション：フードとドリンクの紹介です -->
+            <!-- Menu Section -->
             <section id="menu" class="content-section fade-in-target">
-                <div class="menu__grid">
-                    <!-- Food Menu -->
-                    <div class="menu__category">
-                        <h2 class="section-title menu__title">Food</h2>
-                        <div class="food-images-container">
-                            <img src="food.1.png" alt="バケットとクラッカー" class="food-image">
-                            <img src="food.3.png" alt="チーズの盛り合わせ" class="food-image">
-                        </div>
-                    </div>
-                    <!-- Drink Menu -->
-                    <div class="menu__category">
-                        <h2 class="section-title menu__title">Drink</h2>
-                        <div class="drink-images-container">
-                            <img src="dorink.a.png" alt="アルコールメニュー" class="drink-image">
-                            <img src="dorink.f.png" alt="ソフトドリンクメニュー" class="drink-image">
-                        </div>
-                    </div>
+                <div class="food-section">
+                    <h2 class="section-title">Food</h2>
+                    <img src="food.1.png" alt="バケットとクラッカー" class="food-image">
+                    <img src="food.2.png" alt="チーズとハム" class="food-image">
+                </div>
+                <div class="drink-section">
+                    <h2 class="section-title">Drink</h2>
+                    <img src="dorink.a.png" alt="アルコールドリンク" class="drink-image">
+                    <img src="dorink.f.png" alt="ソフトドリンク" class="drink-image">
                 </div>
             </section>
 
-            <!-- TICKETセクション -->
+            <!-- Ticket Section -->
             <section id="ticket" class="content-section fade-in-target">
                 <h2 class="section-title">Ticket</h2>
-                <a href="https://forms.gle/dMgsynqQ7VEdrk6R6" class="ticket-link">
-                    <img src="ticket.png" alt="参加申し込みはこちら" class="ticket-image">
+                <a href="#" class="ticket-link">
+                    <img src="ticket.png" alt="参加券" class="ticket-image">
                 </a>
                 <div class="ticket-notes">
                     <p>※バケットとクラッカーは食べ放題です。</p>
@@ -104,47 +90,51 @@
                 </div>
             </section>
 
-
-            <!-- ACCESSセクション：会場へのアクセス情報です -->
+            <!-- Access Section -->
             <section id="access" class="content-section fade-in-target">
                 <h2 class="section-title">Access</h2>
-                <div class="access__info">
+                <div class="access-info">
                     <p>兵庫県神戸市中央区栄町通1-3-22</p>
-                    <p>JR神戸線(大阪~神戸) 元町駅 徒歩5分</p>
-                    <p>阪神本線 元町駅 徒歩5分</p>
+                    <p>JR神戸線(大阪~神戸) 元町駅 徒歩5分<br>阪神本線 元町駅 徒歩5分</p>
                 </div>
                 <a href="https://maps.app.goo.gl/1HMt1BV6139dYrtx6" target="_blank" rel="noopener noreferrer">
-                    <img src="mapillustration.png" alt="地図" class="access__map-image">
+                    <img src="mapillustration.png" alt="地図" class="access-map">
                 </a>
-                <div class="access__photos">
-                    <img src="eventspace1.jpg" alt="イベントスペースの外観" class="access__photo">
-                    <img src="eventspace2.png" alt="イベントスペースの内観" class="access__photo">
+                <div class="access-photos">
+                    <img src="eventspace1.jpg" alt="イベントスペースの外観" class="access-photo">
+                    <img src="eventspace2.png" alt="イベントスペースの内観" class="access-photo">
                 </div>
             </section>
 
-            <!-- FAQセクション -->
+            <!-- FAQ Section -->
             <section id="faq" class="content-section fade-in-target">
+                <h2 class="section-title">FAQ</h2>
                 <img src="Q&Atest.png" alt="よくある質問" class="faq-image">
             </section>
 
-            <!-- FOOTERセクション -->
-            <footer id="contact" class="footer-section fade-in-target">
-                <h2 class="section-title footer__title">お問い合わせ先</h2>
-                <div class="footer-message">
-                    <p>お問い合わせは公式Instagramから</p>
-                    <p>DMにてお願い致します</p>
+            <!-- Inquiry Section -->
+            <footer id="contact" class="footer content-section fade-in-target">
+                <h2 class="section-title">お問い合わせ先</h2>
+                <div class="contact-text-wrapper">
+                     <p class="contact-text">お問い合わせは公式Instagramから<br>DMにてお願い致します</p>
                 </div>
-                <p>@off5_minute</p>
-                <a href="https://www.instagram.com/off5_minute/" target="_blank" rel="noopener noreferrer">
-                    <img src="insta.png" alt="Instagram" class="footer__insta-icon">
+                <p class="contact-username">@ユーザー名</p>
+                <a href="https://www.instagram.com/jiji_net?igsh=ZGNremJ5NnkxOGRq&utm_source=qr" target="_blank" rel="noopener noreferrer" class="contact-insta-link">
+                    <img src="insta.png" alt="Instagram" class="contact-insta-icon">
                 </a>
             </footer>
+
+            <!-- Document Request Section (New) -->
+            <section id="document-request" class="content-section fade-in-target">
+                <h2 class="section-title">資料請求</h2>
+                <p class="document-request-text">イベントに関する詳しい資料をご希望の方はこちらからお申し込みください。</p>
+                <div class="document-request-action">
+                    <a href="http://jijilogic.com/information.github.io/" target="_blank" rel="noopener noreferrer" class="request-button">資料請求フォームへ</a>
+                </div>
+            </section>
         </main>
     </div>
-
-    <!-- JavaScriptファイルを読み込みます -->
     <script src="script.js"></script>
-
 </body>
 </html>
 
