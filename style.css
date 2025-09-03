@@ -135,7 +135,7 @@ body {
     height: auto;
 }
 .hero__title {
-    font-family: 'Shippori Mincho', serif; /* 明朝体に戻します */
+    font-family: 'Shippori Mincho', serif;
     font-weight: 400; /* 細いフォントウェイト */
     font-size: 2rem; /* 文字サイズを調整 */
     line-height: 1.7; /* 文字間隔を調整 */
@@ -165,23 +165,21 @@ body {
     box-sizing: border-box;
     margin: 0 auto;
     border-top: 1px solid #ddd;
-    text-align: center; /* セクション内の要素を中央揃えにするための基本設定 */
 }
 .section-title {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    margin-bottom: 30px;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
     text-align: center;
     position: relative;
-    display: inline-block; /* 文字幅に合わせるため */
+    display: inline-block;
 }
 .section-title::after {
     content: '';
     display: block;
-    width: 100%; /* 文字幅に合わせる */
+    width: 100%;
     height: 3px;
     background-color: #f5d142;
-    margin: 10px auto 0;
+    margin-top: 8px;
 }
 .section-subtitle {
     text-align: center;
@@ -197,20 +195,27 @@ body {
 }
 
 /* --- GAMESセクション --- */
+#games {
+    text-align: center;
+}
+.games__title {
+    font-family: var(--font-body);
+}
+
 #games .section-subtitle {
-    text-align: left; /* 左揃えに変更 */
-    font-size: 0.95rem; /* 文字サイズを少し小さくして改行を調整 */
+    text-align: left;
+    font-size: 0.95rem;
 }
 .games__images {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* 間の距離を広げる */
+    gap: 40px;
     margin: 40px 0;
     flex-wrap: wrap;
 }
 .games__image {
-    max-width: 30%; /* 画像サイズをさらに小さく調整 */
+    max-width: 30%;
     height: auto;
 }
 .games__note {
@@ -219,128 +224,125 @@ body {
     margin-top: 40px;
 }
 .highlight {
-    background-color: #fffacd; /* 明るい黄色に変更 */
+    background-color: #fffacd;
     padding: 2px 5px;
 }
-
 
 /* --- MENUセクション --- */
 #menu {
     padding-left: 0;
     padding-right: 0;
 }
-.food-images-container,
-.drink-images-container {
+.food-section, .drink-section {
     text-align: center;
-    margin-top: 30px;
 }
-.food-image,
-.drink-image {
+.drink-section{
+    margin-top: 50px;
+}
+.food-image, .drink-image {
+    max-width: 90%;
+    height: auto;
+    margin: 10px 0;
+}
+
+/* --- TICKETセクション --- */
+#ticket {
+    text-align: center;
+}
+.ticket-image {
     width: 100%;
     max-width: 400px;
     height: auto;
     display: block;
-    margin: 0 auto 20px;
-}
-.menu__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-}
-
-/* --- TICKETセクション --- */
-.ticket-link {
-    display: block; /* aタグをブロック要素にして幅を持たせる */
-    max-width: 500px; /* 画像が大きくなりすぎないように最大幅を指定 */
-    margin: 0 auto; /* 中央揃え */
-}
-.ticket-image {
-    width: 100%; /* 親要素の幅いっぱいに広げる */
-    height: auto; /* 高さは自動調整 */
-    display: block; /* 画像下の余白を消す */
-    border-radius: 10px; /* 少し角を丸める */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 影をつけて立体感を出す */
-    transition: transform 0.3s, box-shadow 0.3s; /* ホバー時のアニメーション */
-}
-.ticket-image:hover {
-    transform: translateY(-5px); /* 少し浮き上がる */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* 影を濃くする */
+    margin: 0 auto;
 }
 .ticket-notes {
     margin-top: 20px;
-    text-align: left;
     font-size: 0.8rem;
-    color: #555;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+    line-height: 1.6;
 }
 .ticket-notes p {
     margin: 5px 0;
 }
 
 /* --- ACCESSセクション --- */
-.access__info {
+#access {
+    text-align: center;
+}
+.access-info {
     text-align: center;
     margin-bottom: 30px;
-    line-height: 2;
 }
-.access__map-image {
+.access-map {
     width: 100%;
-    max-width: 350px; /* 400pxから350pxに変更 */
-    height: auto;
-    margin: 20px 0;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #eee;
 }
-.access__photos {
+.access-photos {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
-.access__photo {
-    width: 45%; /* 48%から45%に変更 */
-    height: auto;
-    border-radius: 10px;
+.access-photo {
+    width: 48%;
+    max-width: 200px;
 }
-
 
 /* --- FAQセクション --- */
+#faq {
+    text-align: center;
+}
 .faq-image {
     width: 100%;
-    height: auto;
+    max-width: 450px;
     display: block;
     margin: 0 auto;
 }
 
-/* --- FOOTERセクション --- */
-.footer-section {
-    padding: 60px 20px;
-    border-top: 1px solid #ddd;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* --- Footer (Contact) --- */
+.footer {
+    text-align: center;
 }
-.footer-message p {
-    margin: 0;
+.contact-text-wrapper {
+    display: inline-block;
+    text-align: center;
 }
-.footer__insta-icon {
+.contact-text {
+    margin-bottom: 20px;
+}
+.contact-username {
+    margin-bottom: 20px;
+}
+.contact-insta-link {
+    display: inline-block;
+}
+.contact-insta-icon {
     width: 60px;
     height: auto;
-    margin-top: 20px;
-    transition: opacity 0.3s;
-}
-.footer__insta-icon:hover {
-    opacity: 0.7;
 }
 
+/* --- Document Request Section (New) --- */
+#document-request {
+    text-align: center;
+}
+.document-request-text {
+    margin-bottom: 30px;
+}
+.request-button {
+    display: inline-block;
+    padding: 15px 40px;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: #fff;
+    border: 1px solid var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+.request-button:hover {
+    background-color: var(--text-color);
+    color: #fff;
+}
 
-/* --- フェードインアニメーション --- */
-.fade-in-target {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s, transform 1s;
-}
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
