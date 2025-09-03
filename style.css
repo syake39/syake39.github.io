@@ -10,7 +10,7 @@
 /* 基本的なページスタイル */
 body {
     margin: 0;
-    background-color: #f0f0f0; /* PC表示時の背景色 */
+    background-color: #ffffff; /* PC表示時の背景色 */
     color: var(--text-color);
     font-family: var(--font-body);
     line-height: 1.8;
@@ -341,5 +341,6 @@ body {
     background-color: var(--text-color);
     color: #fff;
 }
+
 
 
