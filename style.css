@@ -320,6 +320,10 @@ body {
     width: 50px;
     height: auto;
 }
+.document-request-text {
+    margin-bottom: 30px;
+}
+
 .request-button {
     padding: 15px 40px;
     text-decoration: none;
@@ -345,6 +349,7 @@ body {
     background-color: var(--text-color);
     color: #fff;
 }
+
 
 
 
