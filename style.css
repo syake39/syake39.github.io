@@ -329,7 +329,6 @@ body {
     margin-bottom: 30px;
 }
 .request-button {
-    display: inline-block;
     padding: 15px 40px;
     text-decoration: none;
     color: var(--text-color);
@@ -341,6 +340,7 @@ body {
     background-color: var(--text-color);
     color: #fff;
 }
+
 
 
 
