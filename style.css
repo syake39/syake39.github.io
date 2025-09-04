@@ -320,6 +320,10 @@ body {
     width: 50px;
     height: auto;
 }
+.contact-insta-link {
+    display: inline-block;
+    margin-bottom: 20px; /* アイコンとボタンの間に余白を追加 */
+}
 .document-request-text {
     margin-bottom: 30px;
 }
@@ -351,6 +355,7 @@ body {
     background-color: var(--text-color);
     color: #fff;
 }
+
 
 
 
