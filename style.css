@@ -320,14 +320,6 @@ body {
     width: 50px;
     height: auto;
 }
-
-/* --- Document Request Section (New) --- */
-#document-request {
-    text-align: center;
-}
-.document-request-text {
-    margin-bottom: 30px;
-}
 .request-button {
     padding: 15px 40px;
     text-decoration: none;
@@ -340,6 +332,20 @@ body {
     background-color: var(--text-color);
     color: #fff;
 }
+
+/* --- Document Request Section (New) --- */
+#document-request {
+    text-align: center;
+}
+.document-request-text {
+    margin-bottom: 30px;
+}
+
+.request-button:hover {
+    background-color: var(--text-color);
+    color: #fff;
+}
+
 
 
 
